@@ -10,7 +10,7 @@ dotenv.config();
 
 const app = express();
 
-app.get('/healthcheck', (req, res) => {
+app.get('/health', (req, res) => {
   res.status(200).send('OK');
 });
 

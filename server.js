@@ -9,6 +9,11 @@ import jwt from 'jsonwebtoken';
 dotenv.config();
 
 const app = express();
+
+app.get('/healthcheck', (req, res) => {
+  res.status(200).send('OK');
+});
+
 const PORT = process.env.PORT || 3000;
 
 // Security middleware
